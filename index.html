@@ -3,9 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="icon" href="./assets/icons/users-solid.svg" />
+    <title>Users</title>
   </head>
   <body>
-    <h1>API Datas</h1>
+    <header class="header__wrapper">
+      <a href="./recipes.html">recipes-page</a>
+      <h1>users</h1>
+      <ul class="header__collection">
+        <a href="#"><li>Home</li></a>
+        <a href="#"><li>About</li></a>
+        <a href="#"><li>Services</li></a>
+        <a href="#"><li>Users</li></a>
+        <a href="#"><li>APiDatas</li></a>
+      </ul>
+      <div class="users__icons__wrapper">
+        <i class="fa-solid fa-users"></i>
+      </div>
+    </header>
+    <div class="user__wrapper"></div>
+
+    <script src="./js/user.js"></script>
   </body>
 </html>
