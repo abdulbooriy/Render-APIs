@@ -21,9 +21,9 @@
   }
 }
 
-.user__wrapper,
 .skeleton,
-.reciper__wrapper {
+.reciper__wrapper,
+.user__wrapper {
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -66,10 +66,6 @@
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  .skeleton__image {
-    width: 100%;
-    background: #ddd;
   }
   .skeleton__firstName,
   .skeleton__lastName,
@@ -127,6 +123,7 @@
   }
 }
 
+.skeleton__items,
 .recipes__card {
   width: 350px;
   height: 450px;
@@ -141,13 +138,10 @@
     object-fit: cover;
     border-radius: 8px;
   }
-  h2 {
-    font-size: 30px;
-    font-weight: 700;
-  }
 }
 
-.card:hover {
+.card:hover,
+.recipes__card:hover {
   transform: scale(1.05);
   box-shadow: dodgerblue 0px 7px 25px 0px;
 }

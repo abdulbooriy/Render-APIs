@@ -44,14 +44,14 @@ function fetchData(endpoint) {
 }
 
 window.addEventListener("load", () => {
-  fetchData("users?limit=20");
+  fetchData("users");
 });
 
 const skeletonEl = document.querySelector(".skeleton");
 
 function createSkeleton() {
   let fragment = document.createDocumentFragment();
-  Array(20)
+  Array(30)
     .fill("")
     .forEach((_) => {
       const div = document.createElement("div");
