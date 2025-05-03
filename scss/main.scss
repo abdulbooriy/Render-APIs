@@ -11,35 +11,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 210px;
-  color: dodgerblue;
-
-  a {
+  padding: 0 200px;
+  a,
+  i {
     text-decoration: inherit;
+    font-size: 30px;
     color: dodgerblue;
-    font-size: 25px;
-  }
-
-  .users__icons__wrapper {
     cursor: pointer;
-    i {
-      font-size: 30px;
-    }
-  }
-
-  .header__collection {
-    display: flex;
-    font-size: 20px;
-    gap: 50px;
-    a {
-      text-decoration: inherit;
-      color: dodgerblue;
-    }
-    list-style: none;
   }
 }
 
 .user__wrapper,
+.skeleton,
 .reciper__wrapper {
   display: flex;
   gap: 40px;
@@ -48,6 +31,27 @@
   margin-top: 150px;
 }
 
+.skeleton {
+  .skeleton__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+    .skeleton__animation {
+      background: linear-gradient(90deg, #eee, #c2c2c2, #eee);
+      background-size: 200%;
+      animation: skeleton 1.3s linear infinite;
+    }
+  }
+}
+
+@keyframes skeleton {
+  to {
+    background-position: 200%;
+  }
+}
+
+.skeleton__items,
 .card {
   width: 350px;
   height: 450px;
@@ -56,12 +60,28 @@
   transition: 0.2s;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  img {
+  img,
+  .skeleton__image {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
   }
+  .skeleton__image {
+    width: 100%;
+    background: #ddd;
+  }
+  .skeleton__firstName,
+  .skeleton__lastName,
+  .skeleton__maidenName,
+  .skeleton__email,
+  .skeleton__age {
+    width: 80%;
+    height: 22px;
+    background: #ddd;
+    border-radius: 8px;
+  }
+
   &__body {
     padding: 10px 20px;
     display: flex;
@@ -107,8 +127,27 @@
   }
 }
 
+.recipes__card {
+  width: 350px;
+  height: 450px;
+  background: white;
+  border-radius: 8px;
+  transition: 0.2s;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  img,
+  .skeleton__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
 .card:hover {
   transform: scale(1.05);
-  //   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   box-shadow: dodgerblue 0px 7px 25px 0px;
 }

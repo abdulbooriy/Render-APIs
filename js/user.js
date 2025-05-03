@@ -37,9 +37,36 @@ function fetchData(endpoint) {
     })
     .catch((err) => {
       console.log(err);
+    })
+    .finally(() => {
+      skeletonEl.style.display = "none";
     });
 }
 
 window.addEventListener("load", () => {
-  fetchData("users");
+  fetchData("users?limit=20");
 });
+
+const skeletonEl = document.querySelector(".skeleton");
+
+function createSkeleton() {
+  let fragment = document.createDocumentFragment();
+  Array(20)
+    .fill("")
+    .forEach((_) => {
+      const div = document.createElement("div");
+      div.className = "skeleton__items";
+      div.innerHTML = `
+       <div class="skeleton__image skeleton__animation"></div>
+        <div class="skeleton__firstName skeleton__animation"></div>
+        <div class="skeleton__lastName skeleton__animation"></div>
+        <div class="skeleton__maidenName skeleton__animation"></div>
+        <div class="skeleton__email skeleton__animation"></div>
+        <div class="skeleton__age skeleton__animation"></div>
+      `;
+      fragment.appendChild(div);
+    });
+  skeletonEl.appendChild(fragment);
+}
+
+createSkeleton();

@@ -6,13 +6,11 @@ function renderRecipes(data) {
 
   data?.recipes.forEach((recipe) => {
     let card = document.createElement("div");
-    card.className = "card";
+    card.className = "recipes__card";
     card.innerHTML = `
-         <img src=${recipe.image} alt=${recipe.name}></img>
+        <img src=${recipe.image} alt=${recipe.name}></img>
         <div class="card__body">
         <h2><span>Name:<span/> ${recipe.name}</h2>
-        <h4><span>prepTimeMinutes:</span> ${recipe.prepTimeMinutes}</h4>
-        <p><span>cookTimeMinutes:</span> ${recipe.cookTimeMinutes}</p>
         </div>
     `;
     fragment.appendChild(card);
@@ -30,7 +28,6 @@ function fetchData(endpoint) {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
       renderRecipes(data);
     })
     .catch((err) => {
