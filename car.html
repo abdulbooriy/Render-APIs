@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Cars</title>
+  </head>
+  <body>
+    <a class="navigator" href="./index.html">go to users-page</a>
+
+    <form class="form" action="">
+      <label for="name"
+        >name
+        <input
+          id="name"
+          class="name"
+          type="text"
+          placeholder="Enter car name" />
+      </label>
+      <label for="brand"
+        >brand
+        <input
+          id="brand"
+          class="brand"
+          type="text"
+          placeholder="Enter car brand" />
+      </label>
+      <label for="price"
+        >price
+        <input
+          id="price"
+          class="price"
+          type="number"
+          placeholder="Enter car price" />
+      </label>
+      <label for="color"
+        >color
+        <input
+          id="color"
+          class="color"
+          type="text"
+          placeholder="Enter car color" />
+      </label>
+      <label for="isNew"
+        >isNew
+        <input
+          id="isNew"
+          class="isNew"
+          type="text"
+          placeholder="Enter car isNew?" />
+      </label>
+      <button id="submit__btn" class="submit__btn">submit</button>
+    </form>
+
+    <div class="car__wrapper"></div>
+
+    <script src="./js/car.js"></script>
+  </body>
+</html>
